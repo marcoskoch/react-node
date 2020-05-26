@@ -6,8 +6,8 @@ class Tenant extends Model {
       {
         name: Sequelize.STRING,
         birtday: Sequelize.DATE,
-        phone: Sequelize.INTEGER,
-        cpf: Sequelize.INTEGER,
+        phone: Sequelize.STRING,
+        cpf: Sequelize.STRING,
         email: Sequelize.STRING,
         accountable: Sequelize.BOOLEAN,
       },
