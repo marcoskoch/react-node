@@ -20,7 +20,6 @@ export default function Header() {
       <Content>
         <nav>
           <img src={logo} alt="ReactNode" />
-          <Link to="/dashboard">DASHBOARD</Link>
           <Link to="/apartments">APARTAMENTOS</Link>
         </nav>
 
