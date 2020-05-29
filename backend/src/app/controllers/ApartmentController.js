@@ -36,6 +36,21 @@ class ApartmentController {
     return res.json(apartmet);
   }
 
+  async find(req, res) {
+    const apartment = await Apartment.findByPk(req.params.id);
+
+    return res.json(apartment);
+  }
+
+  async update(req, res) {
+    const { id } = req.body;
+    const apartment = await Apartment.findByPk(id);
+
+    await apartment.update(req.body);
+
+    return res.json(apartment);
+  }
+
   async delete(req, res) {
     const apartment = await Apartment.findByPk(req.params.id);
 

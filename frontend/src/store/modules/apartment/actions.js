@@ -12,3 +12,10 @@ export function createApartmentRequest({
     payload: { number, block, name, birtday, phone, cpf, email },
   };
 }
+
+export function updateApartmentRequest({ id, number, block }) {
+  return {
+    type: '@apartment/UPDATE_APARTMENT_REQUEST',
+    payload: { id, number, block },
+  };
+}

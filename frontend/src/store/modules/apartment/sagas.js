@@ -26,6 +26,23 @@ export function* createApartment({ payload }) {
   }
 }
 
+export function* updateApartment({ payload }) {
+  try {
+    const { id, number, block } = payload;
+
+    yield call(api.put, 'apartments', {
+      id,
+      number,
+      block,
+    });
+
+    history.push('/apartments');
+  } catch (err) {
+    toast.error('Falha no cadastro, verifique seus dados!');
+  }
+}
+
 export default all([
   takeLatest('@apartment/CREATE_APARTMENT_REQUEST', createApartment),
+  takeLatest('@apartment/UPDATE_APARTMENT_REQUEST', updateApartment),
 ]);

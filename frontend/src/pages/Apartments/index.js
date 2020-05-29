@@ -54,7 +54,12 @@ function Apartments() {
           <Apartment key={apartment.id}>
             <strong>{apartment.number}</strong>
             <span>{apartment.block}</span>
-            <button type="button" onClick={() => {}}>
+            <button
+              type="button"
+              onClick={() => {
+                history.push(`/apartmentEdit/${apartment.id}`);
+              }}
+            >
               <MdModeEdit size={24} />
             </button>
             <button

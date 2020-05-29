@@ -7,6 +7,8 @@ import SignUp from '../pages/SignUp';
 
 import Apartments from '../pages/Apartments';
 import Apartment from '../pages/Apartment';
+import ApartmentEdit from '../pages/ApartmentEdit';
+
 import Residents from '../pages/Residents';
 import Resident from '../pages/Resident';
 
@@ -18,6 +20,7 @@ export default function Routes() {
 
       <Route path="/apartments" component={Apartments} isPrivate />
       <Route path="/apartment" component={Apartment} isPrivate />
+      <Route path="/apartmentEdit/:id" component={ApartmentEdit} isPrivate />
 
       <Route path="/residents/:id" component={Residents} isPrivate />
       <Route path="/Resident/:id" component={Resident} isPrivate />

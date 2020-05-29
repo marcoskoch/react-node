@@ -15,7 +15,9 @@ routes.post('/sessions', SessionController.store);
 routes.use(authMiddleware);
 
 routes.get('/apartments', ApartmentController.index);
+routes.get('/apartments/:id', ApartmentController.find);
 routes.post('/apartments', ApartmentController.store);
+routes.put('/apartments', ApartmentController.update);
 routes.delete('/apartments/:id', ApartmentController.delete);
 
 routes.get('/tenants/:apartmet_id', TenantController.index);
