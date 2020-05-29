@@ -4,7 +4,7 @@ import {
   MdModeEdit,
   MdDelete,
   MdKeyboardArrowRight,
-  MdAddCircle,
+  MdPersonAdd,
 } from 'react-icons/md';
 import history from '~/services/history';
 import api from '~/services/api';
@@ -14,6 +14,11 @@ import { Container, Resident } from './styles';
 function Residents() {
   const [residents, setResidents] = useState([]);
   const { id } = useParams();
+
+  async function deleteResident(resident_id) {
+    await api.delete(`tenants/${resident_id}`);
+    history.go(0);
+  }
 
   useEffect(() => {
     async function loadResidents() {
@@ -39,10 +44,10 @@ function Residents() {
         <button
           type="button"
           onClick={() => {
-            history.push('/apartment');
+            history.push(`/resident/${id}`);
           }}
         >
-          <MdAddCircle size={32} />
+          <MdPersonAdd size={32} />
         </button>
       </header>
       <ul>
@@ -53,7 +58,12 @@ function Residents() {
             <button type="button" onClick={() => {}}>
               <MdModeEdit size={24} />
             </button>
-            <button type="button" onClick={() => {}}>
+            <button
+              type="button"
+              onClick={() => {
+                deleteResident(resident.id);
+              }}
+            >
               <MdDelete size={24} />
             </button>
             <button type="button" onClick={() => {}}>

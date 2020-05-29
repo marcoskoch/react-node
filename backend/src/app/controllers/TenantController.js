@@ -31,7 +31,7 @@ class TenantController {
 
     tenant.destroy();
 
-    return res.json({ sucess: true });
+    return res.json({ success: true });
   }
 }
 

@@ -45,7 +45,7 @@ class ApartmentController {
       });
     }
 
-    apartment.destroy();
+    apartment.destroy({ cascade: true });
 
     return res.json({ sucess: true });
   }

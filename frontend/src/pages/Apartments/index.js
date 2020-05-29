@@ -14,6 +14,11 @@ import { Container, Apartment } from './styles';
 function Apartments() {
   const [apartments, setApartments] = useState([]);
 
+  async function deleteApartment(apartment_id) {
+    await api.delete(`apartments/${apartment_id}`);
+    history.go(0);
+  }
+
   useEffect(() => {
     async function loadApartments() {
       const response = await api.get('apartments');
@@ -60,7 +65,12 @@ function Apartments() {
             >
               <MdPersonAdd size={24} />
             </button>
-            <button type="button" onClick={() => {}}>
+            <button
+              type="button"
+              onClick={() => {
+                deleteApartment(apartment.id);
+              }}
+            >
               <MdDelete size={24} />
             </button>
             <button
