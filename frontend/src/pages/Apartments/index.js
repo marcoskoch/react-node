@@ -52,13 +52,23 @@ function Apartments() {
             <button type="button" onClick={() => {}}>
               <MdModeEdit size={24} />
             </button>
-            <button type="button" onClick={() => {}}>
+            <button
+              type="button"
+              onClick={() => {
+                history.push(`/resident/${apartment.id}`);
+              }}
+            >
               <MdPersonAdd size={24} />
             </button>
             <button type="button" onClick={() => {}}>
               <MdDelete size={24} />
             </button>
-            <button type="button" onClick={() => {}}>
+            <button
+              type="button"
+              onClick={() => {
+                history.push(`/residents/${apartment.id}`);
+              }}
+            >
               <MdKeyboardArrowRight size={24} />
             </button>
           </Apartment>
