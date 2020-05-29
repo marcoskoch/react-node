@@ -54,11 +54,16 @@ export const Profile = styled.div`
       color: #333;
     }
 
-    a {
+    button {
       display: block;
       margin-top: 2px;
       font-size: 12px;
+      border: none;
       color: #999;
+    }
+
+    button:hover {
+      font-weight: bold;
     }
   }
 

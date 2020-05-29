@@ -27,9 +27,9 @@ export default function Header() {
           <Profile>
             <div>
               <strong>{profile.name}</strong>
-              <a href="#" onClick={handleSignOut}>
+              <button type="button" onClick={handleSignOut}>
                 Logout
-              </a>
+              </button>
             </div>
             <img
               src={
