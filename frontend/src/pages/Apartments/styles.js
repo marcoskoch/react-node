@@ -29,15 +29,18 @@ export const Apartment = styled.li`
   padding: 20px;
   border-radius: 4px;
   background: #fff;
+
   strong {
     display: block;
     font-size: 20px;
     font-weight: normal;
   }
+
   span {
     display: block;
     margin-top: 3px;
   }
+
   button {
     border: 0;
     background: none;

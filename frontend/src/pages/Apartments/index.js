@@ -6,6 +6,7 @@ import {
   MdPersonAdd,
   MdAddCircle,
 } from 'react-icons/md';
+import history from '~/services/history';
 import api from '~/services/api';
 
 import { Container, Apartment } from './styles';
@@ -34,7 +35,12 @@ function Apartments() {
     <Container>
       <header>
         <h1>Apartamentos</h1>
-        <button type="button" onClick={() => {}}>
+        <button
+          type="button"
+          onClick={() => {
+            history.push('/apartment');
+          }}
+        >
           <MdAddCircle size={32} />
         </button>
       </header>
