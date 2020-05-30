@@ -11,6 +11,7 @@ import ApartmentEdit from '../pages/ApartmentEdit';
 
 import Residents from '../pages/Residents';
 import Resident from '../pages/Resident';
+import ResidentEdit from '../pages/ResidentEdit';
 
 export default function Routes() {
   return (
@@ -20,10 +21,11 @@ export default function Routes() {
 
       <Route path="/apartments" component={Apartments} isPrivate />
       <Route path="/apartment" component={Apartment} isPrivate />
-      <Route path="/apartmentEdit/:id" component={ApartmentEdit} isPrivate />
+      <Route path="/apartment-edit/:id" component={ApartmentEdit} isPrivate />
 
       <Route path="/residents/:id" component={Residents} isPrivate />
-      <Route path="/Resident/:id" component={Resident} isPrivate />
+      <Route path="/resident/:id" component={Resident} isPrivate />
+      <Route path="/resident-edit/:id" component={ResidentEdit} isPrivate />
     </Switch>
   );
 }

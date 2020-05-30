@@ -28,18 +28,14 @@ function ApartmentEdit() {
       const response = await api.get(`apartments/${id}`);
 
       const { number, block } = response.data;
-      const data = { number, block };
 
       setApartment({ number, block });
-
-      console.log(apartment);
     }
 
     loadApartment();
   }, []);
 
   function handleSubmit(data) {
-    console.log({ id, ...data });
     dispatch(updateApartmentRequest({ id, ...data }));
   }
 
@@ -48,7 +44,7 @@ function ApartmentEdit() {
       <header>
         <h1>Edição do apartamento</h1>
       </header>
-      <Form schema={schema} onSubmit={handleSubmit}>
+      <Form initialData={apartment} schema={schema} onSubmit={handleSubmit}>
         <Input name="number" placeholder="Número do apartamento" />
         <Input name="block" placeholder="Bloco" />
 

@@ -57,7 +57,7 @@ function Apartments() {
             <button
               type="button"
               onClick={() => {
-                history.push(`/apartmentEdit/${apartment.id}`);
+                history.push(`/apartment-edit/${apartment.id}`);
               }}
             >
               <MdModeEdit size={24} />

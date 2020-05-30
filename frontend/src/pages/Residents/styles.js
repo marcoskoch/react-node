@@ -8,7 +8,7 @@ export const Container = styled.div`
 
   ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
     margin-top: 30px;
   }
@@ -37,6 +37,13 @@ export const Resident = styled.li`
   }
 
   span {
+    display: block;
+    padding: 2px;
+    color: #d82b2b;
+    margin-top: 3px;
+  }
+
+  p {
     display: block;
     margin-top: 3px;
   }
