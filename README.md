@@ -1,7 +1,3 @@
-<h1 align="center">
-    <img src="https://raw.githubusercontent.com/marcoskoch/react-node/master/ReactNode.jpeg"/>
-</h1>
-
 # react-node
 
 ## Backend
@@ -15,3 +11,9 @@
 
 1.  Rode  `yarn`  para instalar as dependências;
 2.  Rode  `yarn start`  para iniciar o client.
+
+<h1 align="center">
+    <img src="https://raw.githubusercontent.com/marcoskoch/react-node/master/ReactNode.jpeg"/>
+</h1>
+
+
